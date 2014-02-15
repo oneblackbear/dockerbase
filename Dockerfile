@@ -2,7 +2,7 @@
 #
 # VERSION               0.0.1
 FROM        ubuntu:12.04
-MAINTAINER  Ross Riley "ross@oneblackbear.com"
+MAINTAINER  Ross Riley "riley.ross@gmail.com"
 VOLUME ["/data/mysql"]
 
 # Update packages
@@ -40,7 +40,7 @@ RUN mv composer.phar /usr/local/bin/composer
 
 # Configure nginx for PHP websites
 RUN echo "cgi.fix_pathinfo = 0;" >> /etc/php5/fpm/php.ini
-RUN mkdir -p /var/www 
+RUN mkdir -p /var/www
 EXPOSE 80
 RUN chown -R www-data:www-data /var/www
 
