@@ -41,6 +41,7 @@ RUN mv composer.phar /usr/local/bin/composer
 # Configure nginx for PHP websites
 RUN echo "cgi.fix_pathinfo = 0;" >> /etc/php5/fpm/php.ini
 RUN echo "max_input_vars = 10000;" >> /etc/php5/fpm/php.ini
+RUN echo "date.timezone = Europe/London;" >> etc/php5/fpm/php.ini
 RUN mkdir -p /var/www
 EXPOSE 80
 RUN chown -R www-data:www-data /var/www
